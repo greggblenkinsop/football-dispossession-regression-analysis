@@ -1,4 +1,4 @@
-def menu_print():
+def menu_print(v, f, d):
     from main import printdataset, printfilters, printvariables
     ds = printdataset()
     fi = printfilters()
@@ -6,10 +6,10 @@ def menu_print():
     print("=============DATA=============\nCurrent Dataset:\n" + ds +
           "\nCurrent Filters:\n" + fi +
           "\nCurrent Variables:\n" + va +
-          "\n\n=============MENU=============\n1 - Change Dataset\n2 - Change Filters\n3 - Change Variables\n4 - Run "
-          "Regression Analysis\n")
+          "\n=============MENU=============\n1 - Change Dataset\n2 - Change Filters\n3 - Change Variables\n4 - Run "
+          "Regression Analysis")
 
-    choice = input("\n============CHOICE============ \nInput - ")
+    choice = int(input("============CHOICE============ \nInput - "))
 
     if choice == 1:
         from main import datasetchanger
@@ -21,5 +21,5 @@ def menu_print():
         from main import variablechanger
         variablechanger()
     if choice == 4:
-        from main import runregression
-        runregression()
+        from analysismenu import analysismenu_print
+        analysismenu_print(v, f, d)
