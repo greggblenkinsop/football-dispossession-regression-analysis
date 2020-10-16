@@ -8,7 +8,8 @@ The project uses regression analysis to analyse a collection of independent vari
 
 
 ## Data
-The default data used for the analysis can be found here and is sourced directly from:
+The default data used for the analysis can be found [here](https://github.com/greggblenkinsop/football-dispossession-regression-analysis/blob/master/data.csv) and is sourced directly from:
+
 **[fbref](https://fbref.com/en/)**
 
 ## To Do
