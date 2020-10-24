@@ -4,12 +4,14 @@ import numpy as np
 import statsmodels.api as sm
 import menu
 
+#Establishes default options for search arguments
 variables = ['Age', 'Def 3rd', 'Mid 3rd', 'Att 3rd', '#Pl', 'Megs', 'PrgDist', 'Rec']
 filters = []
 dataset = 'data.csv'
 
 
 def datasetchanger():
+    '''A function for the user to change the location of the dataset'''
     global dataset
     dataset = input("=============DATA=============" +
                     "\nPlease enter the relative location and file name:\n"
@@ -18,6 +20,7 @@ def datasetchanger():
 
 
 def filterchanger():
+    '''A function for the user to add filters to the data before running the analysis'''
     global filters
     filter_var = input("============FILTER============" +
                        "\nPlease enter the filtered variable from the following:" +
@@ -36,6 +39,7 @@ def filterchanger():
 
 
 def variablechanger():
+    '''A function for the user to change the variables being analysed'''
     global variables
     vc_choice = input("===========VARIABLE===========" +
                       "\nTo see possible variables view: " + dataset +
@@ -55,14 +59,23 @@ def variablechanger():
 
 
 def printfilters():
+    '''Returns:
+    string: list of all filters
+    '''
     return ' - '.join(filters)
 
 
 def printdataset():
+    '''Returns:
+    string: filename of dataset
+    '''
     return ''.join(dataset)
 
 
 def printvariables():
+    '''Returns:
+    string: list of all variables
+    '''
     return ' - '.join(variables)
 
 
